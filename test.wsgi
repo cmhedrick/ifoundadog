@@ -37,6 +37,4 @@ def get_port():
 
     return args.port if args.port else 8080
 
-
-if __name__ == "__main__":
-    run(host="0.0.0.0", port=get_port(), reloader='True', debug='True')
+application = bottle.default_app()
