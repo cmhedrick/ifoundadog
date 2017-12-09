@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-responsive">
   <thead>
     <tr>
       <th scope="col">License ID</th>
@@ -11,12 +11,12 @@
   </thead>
   <tbody>
     <tr>
-      <td>{{result[4]}}</td>
-      <td>{{result[5]}}</td>
-      <td>{{result[6]}}</td>
-      <td>{{result[1]}}</td>
-      <td>{{result[2]}}</td>
-      <td>{{result[3]}} Years</td>
+      <td id="licenseID">{{result[4]}}</td>
+      <td id="sex">{{result[5]}}</td>
+      <td id="neutered">{{result[6]}}</td>
+      <td id="address">{{result[1]}}</td>
+      <td id="dateOfReg">{{result[2]}}</td>
+      <td id="lengthOfReg">{{result[3]}} Years</td>
     </tr>
   </tbody>
 </table>
