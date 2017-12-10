@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Look up a lost dog's owner's address by their license.">
     <meta name="author" content="Christopher Hedrick of CFNoVA">
+    <link rel="alternate" href="https://beta.ifoundadog.org/" hreflang="en" />
+    <link rel="alternate" hreflang="x-default" href="https://beta.ifoundadog.org/" />
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>{{title or 'Map App'}}</title>
