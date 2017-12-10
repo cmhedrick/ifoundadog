@@ -6,4 +6,4 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-<%rebase('templates/newbase.tpl', title='iFoundADog', addstyles=[], scripts=[]) %>
+<%rebase('templates/newbase.tpl', title='iFoundADog', addstyles=[], addscripts=[]) %>

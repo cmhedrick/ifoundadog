@@ -51,6 +51,9 @@
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
     <script src="/static/js/popper.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+    %for jsscript in addscripts:
+        <script src="/static/js/{{jsscript}}.js"></script>
+    %end
   </body>
 </html>
 
