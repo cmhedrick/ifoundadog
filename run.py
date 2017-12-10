@@ -55,8 +55,12 @@ def lookup():
 def get_port():
     description = 'Set port for the bottle server to run on.'
     parser = argparse.ArgumentParser(description)
-    parser.add_argument('-p', '--port', type=int,
-                        help="The port number the server will run on")
+    parser.add_argument(
+        '-p',
+        '--port',
+        type=int,
+        help="The port number the server will run on"
+    )
     args = parser.parse_args()
 
     return args.port if args.port else 8080
