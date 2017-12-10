@@ -47,7 +47,7 @@ def lookup():
     performs the search for the dog license and returns it
     :return:
     """
-    license_id = request.forms.get('inputLicense')
+    license_id = request.forms.get('inputLicense').upper()
     data = api_helpers.get_data()
     match = [r for r in data['result'] if license_id in r]
     return template('templates/result.tpl', result=match[0])
