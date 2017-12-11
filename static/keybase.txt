@@ -1,1 +1,55 @@
-Hello K3yb4s3~<3
+==================================================================
+https://keybase.io/cmhedrick
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://beta.ifoundadog.org
+  * I am cmhedrick (https://keybase.io/cmhedrick) on keybase.
+  * I have a public key ASA48u_RESy5EBtqkSGgyzR2C_-QHMPH-oJwUF3Hvov9Iwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012038f2efd1112cb9101b6a9121a0cb34760bff901cc3c7fa8270505dc7be8bfd230a",
+      "host": "keybase.io",
+      "kid": "012038f2efd1112cb9101b6a9121a0cb34760bff901cc3c7fa8270505dc7be8bfd230a",
+      "uid": "89bfb668df60e120ae7a36adc886e900",
+      "username": "cmhedrick"
+    },
+    "merkle_root": {
+      "ctime": 1512957038,
+      "hash": "77f5245eff8ef89b8c27cc425c58951a98cd878809181a8a1bc1b93dd6a088bcf360182b95fd0eb34fddbfbb08c9dcbb7ed1604d333fd00089a29f66afdbb77a",
+      "hash_meta": "0f84fb280685309da842642c55a89fba0213b8515b53d1cc5adcad7a3e5023ea",
+      "seqno": 1799717
+    },
+    "service": {
+      "hostname": "beta.ifoundadog.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.36"
+  },
+  "ctime": 1512957086,
+  "expire_in": 504576000,
+  "prev": "47c0e0fe095531a1a5d2465be98d041e1a8e3e4f38db187e43434f9797c292e8",
+  "seqno": 55,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgOPLv0REsuRAbapEhoMs0dgv/kBzDx/qCcFBdx76L/SMKp3BheWxvYWTFA017ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzhmMmVmZDExMTJjYjkxMDFiNmE5MTIxYTBjYjM0NzYwYmZmOTAxY2MzYzdmYTgyNzA1MDVkYzdiZThiZmQyMzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzhmMmVmZDExMTJjYjkxMDFiNmE5MTIxYTBjYjM0NzYwYmZmOTAxY2MzYzdmYTgyNzA1MDVkYzdiZThiZmQyMzBhIiwidWlkIjoiODliZmI2NjhkZjYwZTEyMGFlN2EzNmFkYzg4NmU5MDAiLCJ1c2VybmFtZSI6ImNtaGVkcmljayJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxMjk1NzAzOCwiaGFzaCI6Ijc3ZjUyNDVlZmY4ZWY4OWI4YzI3Y2M0MjVjNTg5NTFhOThjZDg3ODgwOTE4MWE4YTFiYzFiOTNkZDZhMDg4YmNmMzYwMTgyYjk1ZmQwZWIzNGZkZGJmYmIwOGM5ZGNiYjdlZDE2MDRkMzMzZmQwMDA4OWEyOWY2NmFmZGJiNzdhIiwiaGFzaF9tZXRhIjoiMGY4NGZiMjgwNjg1MzA5ZGE4NDI2NDJjNTVhODlmYmEwMjEzYjg1MTViNTNkMWNjNWFkY2FkN2EzZTUwMjNlYSIsInNlcW5vIjoxNzk5NzE3fSwic2VydmljZSI6eyJob3N0bmFtZSI6ImJldGEuaWZvdW5kYWRvZy5vcmciLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zNiJ9LCJjdGltZSI6MTUxMjk1NzA4NiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI0N2MwZTBmZTA5NTUzMWExYTVkMjQ2NWJlOThkMDQxZTFhOGUzZTRmMzhkYjE4N2U0MzQzNGY5Nzk3YzI5MmU4Iiwic2Vxbm8iOjU1LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQABYa7F3SSWqSbK7wZgY2l4RApr6YZe05evZTd1ai5Pesn/RlU0MrUs1UWfYooaLuDGL+P5FAjn374XF7rpmUgqoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBUZFTNaViuI3QJUoGlNsDdFK+m1J4fUhxjwOkSmPK68aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cmhedrick
+
+==================================================================
