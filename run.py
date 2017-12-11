@@ -9,18 +9,6 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(current_dir)
 sys.path.append(current_dir)
 
-@route('/.well-known/acme-challenge/<filename:path>')
-def server_static(filename):
-    """
-    Allows for proper routing of Lets Encrypt if you're using ACME
-    :param filename:
-    :return:
-    """
-    return static_file(
-        filename,
-        root=os.path.join(current_dir, ".well-known/acme-challenge")
-    )
-
 #Allows CSS, JS, and Images to be stored in the '/static/' directory and be
 #rendered using paths like "/static/css/example.css".
 @route('/static/<filename:path>')
@@ -65,6 +53,30 @@ def get_port():
 
     return args.port if args.port else 8080
 
+@route('/keybase.txt')
+def verify_keybase():
+    """
+    Allows for proper routing of Lets Encrypt if you're using ACME
+    :param filename:
+    :return:
+    """
+    return static_file('keybase.txt',
+        root=os.path.join(current_dir, 'static')
+    )
+
+@route('/.well-known/acme-challenge/<filename:path>')
+def verify_lets_encrypt(filename):
+    """
+    Allows for proper routing of Lets Encrypt if you're using ACME
+    :param filename:
+    :return:
+    """
+    return static_file(
+        filename,
+        root=os.path.join(current_dir, ".well-known/acme-challenge")
+    )
+
+# HTTP Error Handling Functions
 @error(404)
 def error404(error):
     return 'You\'re looking in the wrong place :P'
