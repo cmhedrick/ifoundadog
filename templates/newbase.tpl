@@ -16,7 +16,7 @@
          * Choose from 'countdown', 'glitch', 'money', 'stop', 'slow', 'without'.
          * Default is 'countdown'.
          */
-        theme: 'money', // @type {string}
+        theme: 'glitch', // @type {string}
 
         /*
          * Or, if you want your own custom theme, specify its properties here.
