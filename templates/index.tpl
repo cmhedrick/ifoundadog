@@ -1,4 +1,4 @@
-<form method="post" action="/lookup">
+<form class="vert-align" method="post" action="/lookup">
   <div class="form-group">
     <label for="inputLicense">Dog License</label>
     <input type="text" class="form-control" id="inputLicense" name="inputLicense" aria-describedby="inputLicenseHelp" placeholder="Dog License">

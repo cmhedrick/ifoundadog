@@ -8,3 +8,17 @@ body {
 #mapid { 
     min-height: 480px;
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 60px;
+  /*line-height: 60px;*/
+  background-color: #007bff;
+}
+.white-text {
+  color: #fff;
+}
+.vert-align {
+  margin-top: 20vh;
+}
