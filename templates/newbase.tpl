@@ -85,30 +85,22 @@
     <meta name="author" content="Christopher Hedrick of CFNoVA">
     <link rel="alternate" href="https://beta.ifoundadog.org/" hreflang="en" />
     <link rel="alternate" hreflang="x-default" href="https://beta.ifoundadog.org/" />
-    <!--it hates favicon??-->
     <link rel="icon" href="/static/images/icon.ico">
-
     <title>{{title or 'Map App'}}</title>
-
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="/static/css/starter-template.css" rel="stylesheet">
     %for stylesheet in addstyles:
         @import url(/static/css/{{stylesheet}}.css);
     %end
-
   </head>
-
   <body>
-
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="/">iFoundADog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -124,7 +116,6 @@
         </form>
       </div>
     </nav>
-
     <main role="main" class="container">
       %include
     </main>
