@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51284230-3"></script>
     <script>
@@ -79,13 +80,24 @@
       };
     </script>
     <script async="" src="https://widget.battleforthenet.com/widget.js"></script>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Look up a lost dog's owner's address by their license for Arlington, VA.">
     <meta name="author" content="Christopher Hedrick of CFNoVA">
     <link rel="alternate" href="https://beta.ifoundadog.org/" hreflang="en" />
     <link rel="alternate" hreflang="x-default" href="https://beta.ifoundadog.org/" />
     <link rel="icon" href="/static/images/icon.ico">
+    <!-- Begin Open Graph Protocol -->
+      <link rel="canonical" href="https://beta.ifoundadog.org/" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="iFoundADog Beta" />
+      <meta property="og:url" content="https://beta.ifoundadog.org/" />
+      <meta property="og:site_name" content="iFoundADog Beta" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="iFoundADog Beta" />
+      <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/beta.ifoundadog.org\/","name":"iFoundADog","alternateName":"iFoundADog"}</script>
+      <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/beta.ifoundadog.org\/","@id":"#organization","name":"iFoundADog","logo":"https:\/\/beta.ifoundadog.org\/static\/images\/noun_364.svg"}</script>
+    <!-- End OGP -->
     <title>{{title or 'Map App'}}</title>
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -116,7 +128,7 @@
         </form>
       </div>
     </nav>
-    <main role="main" class="container">
+    <main class="container">
       %include
     </main>
     <footer class="footer">
