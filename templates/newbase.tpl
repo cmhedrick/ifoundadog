@@ -80,7 +80,7 @@
         always_show_widget: true // @type {boolean}
       };
     </script>-->
-    <script async="" src="https://widget.battleforthenet.com/widget.js"></script>
+    <!--<script async="" src="https://widget.battleforthenet.com/widget.js"></script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Look up a lost dog's owner's address by their license for Arlington, VA.">
     <meta name="author" content="Christopher Hedrick of CFNoVA">
