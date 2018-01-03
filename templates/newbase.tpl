@@ -11,6 +11,7 @@
 
       gtag('config', 'UA-51284230-3');
     </script>
+    <!-- disable net-neutrality pop-up when in dev
     <script type="text/javascript">
       var _bftn_options = {
         /*
@@ -78,7 +79,7 @@
          */
         always_show_widget: true // @type {boolean}
       };
-    </script>
+    </script>-->
     <script async="" src="https://widget.battleforthenet.com/widget.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Look up a lost dog's owner's address by their license for Arlington, VA.">
@@ -134,7 +135,31 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-8 white-text">Look up any dog in Arlington, VA using their dog license.</div>
+          <div class="col-12 col-md-8 white-text">
+            <p>
+              Look up any dog in Arlington, VA using their dog license.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-8 white-text">
+            <p>
+              Designed With:
+            </p>
+            <a class="white-text" href="https://getbootstrap.com/">
+              Bootstrap
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-8 white-text">
+            <p>
+              Open Source Icons By:
+            </p>
+            <a class="white-text" href="https://thenounproject.com/">
+              The Noun Project
+            </a>
+          </div>
         </div>
       </div>
     </footer>

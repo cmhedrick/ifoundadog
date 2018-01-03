@@ -5,9 +5,14 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
-#mapid { 
-    min-height: 480px;
+
+.white-text {
+  color: #fff;
 }
+.vert-align {
+  margin-top: 20vh;
+}
+/* footer */
 .footer {
   position: absolute;
   bottom: 0;
@@ -16,9 +21,14 @@ body {
   /*line-height: 60px;*/
   background-color: #007bff;
 }
-.white-text {
-  color: #fff;
+.footer div.container div.row div.col-12.col-md-8 p,
+.footer div.container div.row div.col-12.col-md-8 a {
+  padding: 0;
+  margin: 0;
 }
-.vert-align {
-  margin-top: 20vh;
+.footer div.container div.row div.col-12.col-md-8 a {
+  text-decoration: underline;
+}
+.footer div.container div.row div.col-12.col-md-8 * {
+  display: inline-block;
 }
