@@ -1,4 +1,8 @@
+db.sqlite3
 env/
-config.py
+media/
+./static/
+*.pyc
 .idea
-__pycache__/
+config.py
+settings_config.py

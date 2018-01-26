@@ -1,7 +1,9 @@
 import json
 import urllib.parse
 import urllib.request
-import config
+
+from . import config
+
 
 def request(url):
     """
@@ -10,6 +12,7 @@ def request(url):
     :return: HTTPSResponse Object
     """
     return urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+
 
 def clean_json_response(dirty_json):
     '''
@@ -21,6 +24,7 @@ def clean_json_response(dirty_json):
     # set encoding
     encoding = dirty_json.info().get_content_charset('utf-8')
     return dirty_json.read().decode(encoding)
+
 
 def get_data():
     '''

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}
+    Dog Profile
+{% endblock %}
+
+{% block excss %}{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+</div>
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">License ID</th>
+      <th scope="col">Sex</th>
+      <th scope="col">Spayed/Neutered</th>
+      <th scope="col">Address</th>
+      <th scope="col">Date Of Registration</th>
+      <th scope="col">Length of Registration</th>
+      <th scope="col">Expired</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="licenseID">{{dogprofile.license_id}}</td>
+      <td id="sex">{{dogprofile.dog_sex_choices}}</td>
+      <td id="neutered">{{dogprofile.neutered}}</td>
+      <td id="address">{{dogprofile.owner_address}}</td>
+      <td id="dateOfReg">{{dogprofile.payment_date}}</td>
+      <td id="lengthOfReg">{{dogprofile.years_issued}} Years</td>
+      <td id="expired">N/A</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
+{% block exscript %}<link rel="stylesheet" href="/static/js/date-helper.js">{% endblock %}

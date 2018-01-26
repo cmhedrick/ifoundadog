@@ -32,3 +32,6 @@ body {
 .footer div.container div.row div.col-12.col-md-8 * {
   display: inline-block;
 }
+ul.errorlist {
+    color: red;
+}
