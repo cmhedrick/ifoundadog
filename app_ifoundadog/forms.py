@@ -2,7 +2,7 @@ from django import forms
 
 #from app_ifoundadog import models
 
-
+# keep the below code just in case.
 # class AddUserForm(forms.Form):
 #     email = forms.EmailField(
 #         widget=forms.TextInput(attrs={
@@ -100,3 +100,19 @@ class LookUpLicenseForm(forms.Form):
         if len(str(licence).strip()) != 7:
             self.add_error('inputLicense', 'Licences must contain 7 characters!')
         return cleaned_data
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'placeholder': "Username",
+            'class': "form-control"
+        })
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={
+            'placeholder': "Password",
+            'class': "form-control"
+        }),
+        label="Password"
+    )

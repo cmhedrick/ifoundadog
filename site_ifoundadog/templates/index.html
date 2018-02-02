@@ -3,15 +3,18 @@
 {% block excss %}
 {% endblock %}
 {% block content %}
-<form class="vert-align" method="post" action="">
-    {% csrf_token %}
-    <div class="form-group">
-        {% for field in form %}
-            {{ field.label_tag }}
-            {{ field }}
-            {{ field.errors }}
-        {% endfor %}
-    </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<main class="container">
+    <form class="vert-align" method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            {% for field in form %}
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+            {% endfor %}
+        </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>
+
 {% endblock %}

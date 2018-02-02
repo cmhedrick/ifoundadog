@@ -1,23 +1,19 @@
 {% extends "base.html" %}
 {% block title %}Login{% endblock %}
-{% block excss %}<link rel="stylesheet" href="/static/css/form.css">{% endblock %}
+{% block excss %}
+<link href="/static/css/login.css" rel="stylesheet">
+{% endblock %}
 {% block content %}
-<h1 id="page_title">
-    Login
-</h1>
-<div class="row">
-    <form class="col s12" action="" method="post" enctype="multipart/form-data">
+<main class="container">
+    <form class="form-signin text-center" action="" method="post" enctype="multipart/form-data">
+        <img class="mb-4 text-center" src="/static/images/noun_364.svg" alt="iFoundADog Logo" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
         {% csrf_token %}
         {% for field in form %}
-            <div class="row" id="{{forloop.counter}}">
-                <div class="input-field col s12" >
-                    {{ field }}
-                    {{ field.label_tag }}
-                    {{ field.errors }}
-                </div>
-            </div>
+            {{ field }}
+            {{ field.errors }}
         {% endfor %}
-        <input type="submit" value="Submit" id="submit_button" />
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit" id="submit_button" />
     </form>
-</div>
+</main>
 {% endblock %}

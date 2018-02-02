@@ -24,12 +24,13 @@ class IndexPageView(TemplateView):
         context = super(IndexPageView, self).get_context_data(**kwargs)
         return context
 
-#class LogoutView(RedirectView):
-#    url = '/'
-#
-#    def get_redirect_url(self, **kwargs):
-#        logout(self.request)
-#        return super(LogoutView, self).get_redirect_url(**kwargs)
+
+class LogoutView(RedirectView):
+    url = '/'
+
+    def get_redirect_url(self, **kwargs):
+        logout(self.request)
+        return super(LogoutView, self).get_redirect_url(**kwargs)
 
 
 class LicenseLookUpView(generic.FormView):
@@ -100,23 +101,20 @@ class DogDetailView(generic.TemplateView):
                 neutered=neutered
             )
             dogprofile.save()
-        #import pdb;
-        #pdb.set_trace()
+        # import pdb;
+        # pdb.set_trace()
         context['dogprofile'] = dogprofile
         return context
 
 
-# class LoginView(generic.FormView):
-#     template_name = 'login.html'
-#     form_class = LoginForm
-#
-#     def get_success_url(self):
-#         user = self.request.POST['username']
-#         password = self.request.POST['password']
-#         authed_user = authenticate(
-#             username=user,
-#             password=password
-#         )
-#         login(request=self.request, user=authed_user)
-#         user_id = models.User.objects.get(username=user).id
-#         return '/'
+class LoginView(generic.FormView):
+    template_name = 'login.html'
+    form_class = LoginForm
+
+    def get_success_url(self):
+        user = self.request.POST['username']
+        password = self.request.POST['password']
+        authed_user = authenticate(request=self.request,username=user,password=password)
+        login(request=self.request, user=authed_user)
+
+        return '/'

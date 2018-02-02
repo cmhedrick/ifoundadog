@@ -1,0 +1,32 @@
+/* Profile Picture */
+div.profile-image {
+    max-width: 500px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+div.profile-name {
+    font-weight: bold;
+}
+/* Detail blocks */
+.detail-block {
+    display: grid;
+}
+
+.detail-block span.detail-title {
+    font-weight: bold;
+}
+
+/* Footer override to force it to scroll for small screens*/
+@media only screen
+and (max-width: 600px) {
+    /* Footer override to force it to scroll for small screens*/
+    .footer {
+        position: initial;
+        bottom: initial;
+    }
+    div.profile-image {
+        max-width: 500px;
+        margin-left: initial;
+        margin-right: initial;
+    }
+}

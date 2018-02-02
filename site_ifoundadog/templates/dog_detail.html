@@ -3,49 +3,52 @@
     Dog Profile
 {% endblock %}
 
-{% block excss %}{% endblock %}
+{% block excss %}
+  <link href="/static/css/dog_detail.css" rel="stylesheet">
+{% endblock %}
 {% block content %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2">
+<main class="container-fluid">
+  <div class="profile-container">
+    <div class="profile-name">
+      <p class="text-center">
+        {{dogprofile.dog_name}}
+      </p>
     </div>
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-2">
-    </div>
-    <div class="col-sm-2">
-    </div>
-    <div class="col-sm-1">
+    <div class="profile-image">
+      <img src="{{dogprofile.profile_pic.url}}" class="img-fluid" alt="Responsive image">
     </div>
   </div>
-</div>
-<table class="table table-responsive">
-  <thead>
-    <tr>
-      <th scope="col">License ID</th>
-      <th scope="col">Sex</th>
-      <th scope="col">Spayed/Neutered</th>
-      <th scope="col">Address</th>
-      <th scope="col">Date Of Registration</th>
-      <th scope="col">Length of Registration</th>
-      <th scope="col">Expired</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="licenseID">{{dogprofile.license_id}}</td>
-      <td id="sex">{{dogprofile.dog_sex_choices}}</td>
-      <td id="neutered">{{dogprofile.neutered}}</td>
-      <td id="address">{{dogprofile.owner_address}}</td>
-      <td id="dateOfReg">{{dogprofile.payment_date}}</td>
-      <td id="lengthOfReg">{{dogprofile.years_issued}} Years</td>
-      <td id="expired">N/A</td>
-    </tr>
-  </tbody>
-</table>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-1 detail-block">
+      <span class="detail-title">License ID</span>
+      <span>{{dogprofile.license_id}}</span>
+    </div>
+    <div class="col-sm-1 detail-block">
+      <span class="detail-title">Sex</span>
+      <span>{{dogprofile.dog_sex_choices}}</span>
+    </div>
+    <div class="col-sm-2 detail-block">
+      <span class="detail-title">Spayed/Neutered</span>
+      <span>{{dogprofile.neutered}}</span>
+    </div>
+    <div class="col-sm-3 detail-block">
+      <span class="detail-title">Address</span>
+      <span>{{dogprofile.owner_address}}</span>
+    </div>
+    <div class="col-sm-2 detail-block">
+      <span class="detail-title">Registration Date</span>
+      <span>{{dogprofile.payment_date}}</span>
+    </div>
+    <div class="col-sm-2 detail-block">
+      <span class="detail-title">Registration Length</span>
+      <span>{{dogprofile.years_issued}} Years</span>
+    </div>
+    <div class="col-sm-1 detail-block">
+      <span class="detail-title">Active</span>
+      <span>N/A</span>
+    </div>
+  </div>
+</main>
 {% endblock %}
 {% block exscript %}<link rel="stylesheet" href="/static/js/date-helper.js">{% endblock %}
