@@ -5,6 +5,6 @@ API_URL_SUFFIX = '/data.ajson/?auth_key='
 # API Key obtained from https://data.arlingtonva.us/developers/
 API_KEY = 'YOUR API KEY HERE'
 # DATA SET NAME
-DATASET = 'DATA-SET-NAME-HERE'
+DATASET = 'CURRE-DOG-LICEN'
 # Complete Callable URL
 API_URL = API_URL_PREFIX + DATASET + API_URL_SUFFIX + API_KEY
