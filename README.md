@@ -93,5 +93,5 @@
     ```bash
     python manage.py runserver
     ```
-16. in your browser go to 0.0.0.0:8000/admin/ and attempt to login
-17. explore the rest of the site by going back to the initial screen at 0.0.0.0:8000/
+16. in your browser go to http://127.0.0.1:8000/admin/ and attempt to login
+17. explore the rest of the site by going back to the initial screen at http://127.0.0.1:8000/
