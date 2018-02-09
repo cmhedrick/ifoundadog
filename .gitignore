@@ -6,3 +6,4 @@ media/
 .idea
 config.py
 settings_config.py
+venv/
