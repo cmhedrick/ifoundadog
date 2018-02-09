@@ -1,4 +1,0 @@
-# generate key from https://www.miniwebtool.com/django-secret-key-generator/
-SECRET_KEY = 'KEY HERE'
-DEBUG = True
-ENVIRONMENT = 'DEV'
