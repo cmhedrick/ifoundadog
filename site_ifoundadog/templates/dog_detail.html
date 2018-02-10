@@ -15,7 +15,11 @@
       </p>
     </div>
     <div class="profile-image">
-      <img src="{{dogprofile.profile_pic.url}}" class="img-fluid" alt="Responsive image">
+      {% if dogprofile.profile_pic %}
+        <img src="{{dogprofile.profile_pic.url}}" class="img-fluid" alt="Responsive image">
+      {% else %}
+        <img src="/static/images/noun_364.svg" class="img-fluid" alt="Responsive image">
+      {% endif %}
     </div>
   </div>
   <hr/>
