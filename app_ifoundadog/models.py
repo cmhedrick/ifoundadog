@@ -76,7 +76,7 @@ class UserProfile(models.Model):
         )
 
         if exp_date.days > 0:
-            return False
+            return True
         else:
             return False
 
