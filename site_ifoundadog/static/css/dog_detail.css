@@ -11,12 +11,27 @@ div.profile-name {
 .detail-block {
     display: grid;
 }
-
 .detail-block span.detail-title {
     font-weight: bold;
 }
-
-/* Footer override to force it to scroll for small screens*/
+/*tweaks for big/HD screens*/
+@media only screen
+and (min-width: 1680px) {
+    div.profile-image {
+        margin-left: 40vw;
+        margin-right: 30vw;
+    }
+}
+/*tweaks for average laptops*/
+@media only screen
+and (min-width: 1300px)
+and (max-width: 1679px){
+    div.profile-image {
+        margin-left: 37vw;
+        margin-right: 30vw;
+    }
+}
+/*tweaks for modern majority of cell phones*/
 @media only screen
 and (max-width: 600px) {
     /* Footer override to force it to scroll for small screens*/
@@ -25,8 +40,7 @@ and (max-width: 600px) {
         bottom: initial;
     }
     div.profile-image {
-        max-width: 500px;
-        margin-left: initial;
+        margin-left: 3vw;
         margin-right: initial;
     }
 }
