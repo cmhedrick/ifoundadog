@@ -5,6 +5,8 @@ from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
+from . import datetime_helpers as date_util
+
 
 class UserProfile(models.Model):
     MALE = 'Male'
@@ -16,7 +18,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(
         User,
         related_name='dog_profile',
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        null=True
     )
     dog_name = models.CharField(max_length=32)
     first_name = models.CharField(
@@ -63,8 +66,22 @@ class UserProfile(models.Model):
         default=False
     )
 
+    @property
+    def is_active(self):
+        if self.payment_date is None or self.years_issued is None:
+            return False
+        exp_date = (
+            date_util.add_years(self.payment_date, self.years_issued) -
+            datetime.now()
+        )
+
+        if exp_date.days > 0:
+            return False
+        else:
+            return False
+
     def __unicode__(self):
-          return "%s %s" % (self.user.first_name, self.user.last_name)
+        return "%s %s" % (self.user.first_name, self.user.last_name)
 
     def __str__(self):
-          return "%s %s" % (self.user.first_name, self.user.last_name)
+        return "%s %s" % (self.user.first_name, self.user.last_name)

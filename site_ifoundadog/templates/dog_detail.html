@@ -50,7 +50,11 @@
     </div>
     <div class="col-sm-1 detail-block">
       <span class="detail-title">Active</span>
-      <span>N/A</span>
+        {% if dogprofile.is_active %}
+          <img class="glyph glyph-check" src="/static/images/octicons/green-check.svg" class="img-fluid" alt="Responsive image">
+        {% else %}
+          <img class="glyph glyph-x" src="/static/images/octicons/red-x.svg" class="img-fluid" alt="Responsive image">
+        {% endif %}
     </div>
   </div>
 </main>

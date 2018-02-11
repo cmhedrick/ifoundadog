@@ -14,6 +14,9 @@ div.profile-name {
 .detail-block span.detail-title {
     font-weight: bold;
 }
+.glyph {
+    width: 1.5vw;
+}
 /*tweaks for big/HD screens*/
 @media only screen
 and (min-width: 1680px) {
@@ -43,4 +46,8 @@ and (max-width: 600px) {
         margin-left: 3vw;
         margin-right: initial;
     }
+    .glyph {
+        width: 8vw;
+    }
 }
+
