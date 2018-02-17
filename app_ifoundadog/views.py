@@ -3,12 +3,10 @@ from __future__ import unicode_literals
 
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic.base import TemplateView
-from django.contrib.auth.models import User
 from django.views import generic
 
 from app_ifoundadog import models
-from . import account_helpers
-from . import api_helpers
+
 from .forms import *
 
 
@@ -62,48 +60,13 @@ class DogDetailView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(DogDetailView, self).get_context_data(**kwargs)
-        data = api_helpers.get_data()
-        # quick one liner to just get the match
-        match = [r for r in data['result'] if kwargs['id'] in r]
-
         # check if the data is in our database if not set to None because django
         try:
             dogprofile = models.UserProfile.objects.get(license_id=kwargs['id'])
+            context['dogprofile'] = dogprofile
         except models.UserProfile.DoesNotExist:
             dogprofile = None
 
-        # if a match is found, and there's no profile create one
-        if match and dogprofile is None:
-            # turn neutered status to bool
-            if str(match[0][6]).lower() == 'yes':
-                neutered = True
-            else:
-                neutered = False
-            # creates dog profile
-            new_user = models.User.objects.create(
-                username='DogOwner: ' + match[0][4],
-                email='DogOwner: ' + match[0][4] + '@ifoundadog.net',
-                first_name='DogOwner: ' + match[0][4],
-                last_name='DogOwner: ' + match[0][4]
-            )
-            new_user.set_password(account_helpers.generate_password())
-            new_user.save()
-            dogprofile = models.UserProfile.objects.create(
-                user=new_user,
-                dog_name=match[0][4],
-                first_name=new_user.first_name,
-                last_name=new_user.last_name,
-                owner_address=match[0][1],
-                payment_date=match[0][2],
-                years_issued=match[0][3],
-                license_id=match[0][4],
-                dog_sex_choices=match[0][5],
-                neutered=neutered
-            )
-            dogprofile.save()
-        # import pdb;
-        # pdb.set_trace()
-        context['dogprofile'] = dogprofile
         return context
 
 
@@ -114,7 +77,9 @@ class LoginView(generic.FormView):
     def get_success_url(self):
         user = self.request.POST['username']
         password = self.request.POST['password']
-        authed_user = authenticate(request=self.request,username=user,password=password)
+        authed_user = authenticate(
+            request=self.request, username=user, password=password
+        )
         login(request=self.request, user=authed_user)
 
         return '/'

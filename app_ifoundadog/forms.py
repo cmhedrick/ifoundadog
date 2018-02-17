@@ -1,6 +1,8 @@
 from django import forms
 
-#from app_ifoundadog import models
+from app_ifoundadog import models
+from . import account_helpers
+from . import api_helpers
 
 # keep the below code just in case.
 # class AddUserForm(forms.Form):
@@ -94,11 +96,62 @@ class LookUpLicenseForm(forms.Form):
         :return:
         """
         cleaned_data = super(LookUpLicenseForm, self).clean()
-        licence = cleaned_data.get('inputLicense')
+        licence = str(cleaned_data.get('inputLicense')).upper()
         if licence is None or str(licence).strip() == '':
             self.add_error('inputLicense', 'No licence provided.')
         if len(str(licence).strip()) != 7:
-            self.add_error('inputLicense', 'Licences must contain 7 characters!')
+            self.add_error(
+                'inputLicense', 'Licences must contain 7 characters!'
+            )
+
+        # check if the data is in our database if not set to None because django
+        try:
+            dogprofile = models.UserProfile.objects.get(license_id=licence)
+            match = None
+        except models.UserProfile.DoesNotExist:
+            dogprofile = None
+
+        # if profile is not in the db, check the open data portal
+        if dogprofile is None:
+            data = api_helpers.get_data()
+            # quick one liner to just get the match
+            match = [r for r in data['result'] if licence in r]
+
+        # if a match is found, and there's no profile create one
+        if match and dogprofile is None:
+            # turn neutered status to bool
+            if str(match[0][6]).lower() == 'yes':
+                neutered = True
+            else:
+                neutered = False
+            # creates dog profile
+            new_user = models.User.objects.create(
+                username='DogOwner: ' + match[0][4],
+                email='DogOwner: ' + match[0][4] + '@ifoundadog.net',
+                first_name='DogOwner: ' + match[0][4],
+                last_name='DogOwner: ' + match[0][4]
+            )
+            new_user.set_password(account_helpers.generate_password())
+            new_user.save()
+            dogprofile = models.UserProfile.objects.create(
+                user=new_user,
+                dog_name=match[0][4],
+                first_name=new_user.first_name,
+                last_name=new_user.last_name,
+                owner_address=match[0][1],
+                payment_date=match[0][2],
+                years_issued=match[0][3],
+                license_id=match[0][4],
+                dog_sex_choices=match[0][5],
+                neutered=neutered
+            )
+            dogprofile.save()
+
+        elif not match and dogprofile is None:
+            self.add_error(
+                'inputLicense', 'No dog has this ID!'
+            )
+
         return cleaned_data
 
 
