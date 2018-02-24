@@ -36,8 +36,8 @@ class UserProfile(models.Model):
     )
     profile_pic = models.ImageField(upload_to='profile/%Y/%m/%d')
     phone_number = models.CharField(
-        max_length=10,
-        default='XXX-XXX-XXXX'
+        max_length=12,
+        default='XXXXXXXXXX'
     )
     license_id = models.CharField(
         max_length=7,
