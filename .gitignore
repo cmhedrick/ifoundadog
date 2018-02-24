@@ -1,7 +1,7 @@
 db.sqlite3
 env/
 media/
-./static/
+static/
 *.pyc
 .idea
 config.py
