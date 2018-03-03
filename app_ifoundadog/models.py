@@ -22,9 +22,6 @@ class UserProfile(models.Model):
         null=True
     )
     dog_name = models.CharField(max_length=32)
-    is_lost = models.BooleanField(
-        default=False
-    )
     first_name = models.CharField(
         max_length=64,
         blank=False,
