@@ -64,6 +64,12 @@
 
 17. Explore the rest of the site by going back to the initial screen at `0.0.0.0:8000/`
 
+### OS X certification store issue
+Dog lookup via dev URL when running the app in OS X may run into errors related to validating the SSL certificate, notably if Python 3.6 was installed using the installer downloaded from Python.org (instead of Homebrew).
+The urllib library of Python 3.6 depends on a different cert store than OS X's default. **The fix** is to obtain the Python-specific store by running:
+/Applications/Python 3.6/Install Certificates.command
+SSL certificate verification should then function as expected. 
+
 
 ### Installation Windows:
 1. clone the project
