@@ -110,7 +110,7 @@ class LookUpLicenseForm(forms.Form):
             match = None
         except models.UserProfile.DoesNotExist:
             dogprofile = None
-
+        # import pdb; pdb.set_trace()
         # if profile is not in the db, check the open data portal
         if dogprofile is None:
             data = api_helpers.get_data()

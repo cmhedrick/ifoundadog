@@ -35,6 +35,7 @@ def get_data():
         clean_json = clean_json_response(
             urllib.request.urlopen(request(config.API_URL))
         )
+        # import pdb; pdb.set_trace()
         data = json.loads(clean_json)
         return data
 
