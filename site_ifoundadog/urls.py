@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.views.generic.base import RedirectView
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls.static import static
@@ -12,7 +13,8 @@ urlpatterns = [
     url(r'^$', views.LicenseLookUpView.as_view()),
     url(r'^dog/(?P<id>[\w\-]+)/$', views.DogDetailView.as_view()),
     url(r'^login/$', views.LoginView.as_view()),
-    url(r'^logout/$', views.LogoutView.as_view())
+    url(r'^logout/$', views.LogoutView.as_view()),
+    url(r'^keybase.txt/$', RedirectView.as_view(url='/static/keybase.txt', permanent=False)),
 ]
 
 if settings.DEBUG:
