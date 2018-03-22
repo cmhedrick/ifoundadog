@@ -55,7 +55,7 @@ class UserProfile(models.Model):
         default=datetime.now
     )
     years_issued = models.IntegerField(
-        default=0
+        default=1
     )
     dog_sex_choices = models.CharField(
         max_length=6,
