@@ -8,3 +8,4 @@ config.py
 settings_config.py
 venv/
 settings_pro.py
+.vs/

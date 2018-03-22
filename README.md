@@ -64,6 +64,12 @@
 
 17. Explore the rest of the site by going back to the initial screen at `0.0.0.0:8000/`
 
+### OS X certification store issue
+When running the app in OS X, and looking up dogs by license, you may run into errors related to validating the SSL certificate.
+The urllib library of Python 3.6 depends on a different cert store than OS X's default. More information can be found in the readme.rtf file accompanying the installation. **The fix** is to obtain the Python-specific store by running:
+/Applications/Python 3.6/Install Certificates.command
+SSL certificate verification should then function as expected. 
+
 
 ### Installation Windows:
 1. clone the project
