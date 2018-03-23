@@ -64,6 +64,7 @@ class DogDetailView(generic.TemplateView):
         try:
             dogprofile = models.UserProfile.objects.get(license_id=kwargs['id'])
             context['dogprofile'] = dogprofile
+            context['user'] = self.request.user
         except models.UserProfile.DoesNotExist:
             dogprofile = None
 
