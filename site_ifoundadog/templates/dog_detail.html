@@ -36,10 +36,12 @@
       <span class="detail-title">Spayed/Neutered</span>
       <span>{{dogprofile.neutered}}</span>
     </div>
-    <div class="col-sm-3 detail-block">
-      <span class="detail-title">Address</span>
-      <span>{{dogprofile.owner_address}}</span>
-    </div>
+    {% if user.dog_profile == dogprofile %}
+      <div class="col-sm-3 detail-block">
+        <span class="detail-title">Address</span>
+        <span>{{dogprofile.owner_address}}</span>
+      </div>
+    {% endif %}
     <div class="col-sm-2 detail-block">
       <span class="detail-title">Registration Date</span>
       <span>{{dogprofile.payment_date|date:"F d o"}}</span>
