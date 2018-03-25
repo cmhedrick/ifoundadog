@@ -69,6 +69,26 @@ class DogDetailView(generic.TemplateView):
             dogprofile = None
 
         return context
+        
+class DogEditView(generic.UpdateView):
+    model = models.UserDogProfile
+    fields = [
+        'dog_name',
+        'is_lost',
+        'first_name',
+        'last_name',
+        'profile_pic',
+        'phone_number',
+        'owner_address'
+    ]
+    template_name = "userdogprofile_update_form.html"
+    #template_name_suffix = '_update_form'
+
+    def get_object(self):
+        return models.UserDogProfile.objects.get(license_id=self.kwargs['id'])
+        
+    def get_success_url(self):
+        return '/dog/%s/' % self.kwargs['id']
 
 
 class LoginView(generic.FormView):
@@ -84,3 +104,4 @@ class LoginView(generic.FormView):
         login(request=self.request, user=authed_user)
 
         return '/'
+
