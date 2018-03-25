@@ -36,7 +36,7 @@
       <span class="detail-title">Spayed/Neutered</span>
       <span>{{dogprofile.neutered}}</span>
     </div>
-    {% if user.dog_profile == dogprofile %}
+    {% if user == dogprofile.user %}
       <div class="col-sm-3 detail-block">
         <span class="detail-title">Address</span>
         <span>{{dogprofile.owner_address}}</span>

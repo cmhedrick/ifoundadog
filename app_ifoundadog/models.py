@@ -15,9 +15,8 @@ class UserDogProfile(models.Model):
         (MALE, 'Male'),
         (FEMALE, 'Female')
     )
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User,
-        related_name='dog_profile',
         on_delete=models.CASCADE,
         null=True
     )
