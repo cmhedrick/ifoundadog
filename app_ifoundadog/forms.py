@@ -106,9 +106,9 @@ class LookUpLicenseForm(forms.Form):
 
         # check if the data is in our database if not set to None because django
         try:
-            dogprofile = models.UserProfile.objects.get(license_id=licence)
+            dogprofile = models.UserDogProfile.objects.get(license_id=licence)
             match = None
-        except models.UserProfile.DoesNotExist:
+        except models.UserDogProfile.DoesNotExist:
             dogprofile = None
         # import pdb; pdb.set_trace()
         # if profile is not in the db, check the open data portal
@@ -133,7 +133,7 @@ class LookUpLicenseForm(forms.Form):
             )
             new_user.set_password(account_helpers.generate_password())
             new_user.save()
-            dogprofile = models.UserProfile.objects.create(
+            dogprofile = models.UserDogProfile.objects.create(
                 user=new_user,
                 dog_name=match[0][4],
                 first_name=new_user.first_name,

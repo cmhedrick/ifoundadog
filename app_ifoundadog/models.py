@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from . import datetime_helpers as date_util
 
 
-class UserProfile(models.Model):
+class UserDogProfile(models.Model):
     MALE = 'Male'
     FEMALE = 'Female'
     DOG_SEX_CHOICES = (
