@@ -5,4 +5,5 @@ from django.contrib import admin
 
 from app_ifoundadog import models
 
-admin.site.register(models.UserProfile)
+admin.site.register(models.UserDogProfile)
+

@@ -103,3 +103,4 @@ if ENVIRONMENT.lower() == 'production':
     from settings_pro import *
 else:
     from settings_dev import *
+
