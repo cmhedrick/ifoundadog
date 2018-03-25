@@ -62,10 +62,10 @@ class DogDetailView(generic.TemplateView):
         context = super(DogDetailView, self).get_context_data(**kwargs)
         # check if the data is in our database if not set to None because django
         try:
-            dogprofile = models.UserProfile.objects.get(license_id=kwargs['id'])
+            dogprofile = models.UserDogProfile.objects.get(license_id=kwargs['id'])
             context['dogprofile'] = dogprofile
             context['user'] = self.request.user
-        except models.UserProfile.DoesNotExist:
+        except models.UserDogProfile.DoesNotExist:
             dogprofile = None
 
         return context
