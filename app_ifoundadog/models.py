@@ -37,7 +37,11 @@ class UserProfile(models.Model):
         null=False,
         default="Last Name"
     )
-    profile_pic = models.ImageField(upload_to='profile/%Y/%m/%d')
+    profile_pic = models.ImageField(
+        blank=True,
+        null=True,
+        upload_to='profile/%Y/%m/%d'
+        )
     phone_number = models.CharField(
         max_length=12,
         default='XXXXXXXXXX'
