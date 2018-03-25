@@ -65,6 +65,7 @@ class DogDetailView(generic.TemplateView):
             dogprofile = models.UserDogProfile.objects.get(license_id=kwargs['id'])
             context['dogprofile'] = dogprofile
             context['user'] = self.request.user
+            # import pdb; pdb.set_trace()
         except models.UserDogProfile.DoesNotExist:
             dogprofile = None
 
