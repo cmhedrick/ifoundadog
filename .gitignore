@@ -1,7 +1,6 @@
 db.sqlite3
 env/
 media/
-static/
 *.pyc
 .idea
 config.py
