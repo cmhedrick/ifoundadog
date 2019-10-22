@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+    Dog Profile
+{% endblock %}
+
+{% block excss %}
+  <link href="/static/css/dog_detail.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>
+{% endblock %}
+{% block exscript %}<link rel="stylesheet" href="/static/js/date-helper.js">{% endblock %}
+
+
+

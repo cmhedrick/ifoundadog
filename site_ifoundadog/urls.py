@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.LicenseLookUpView.as_view()),
     url(r'^dog/(?P<id>[\w\-]+)/$', views.DogDetailView.as_view()),
+    url(r'^dog/(?P<id>[\w\-]+)/update/$', views.DogEditView.as_view()),
     url(r'^login/$', views.LoginView.as_view()),
     url(r'^logout/$', views.LogoutView.as_view()),
     url(r'^keybase.txt/$', RedirectView.as_view(url='/static/keybase.txt', permanent=False)),
